@@ -22,15 +22,20 @@ console.log(products)
 
 
   return (
-    <div className='home'>
-      <div className='home__container-car'>
-        {
-          products?.map (product => {
-            <CardHome />
-          })
-        }
+    
+      <div className='home'>
+        <div className='home__container-card'>
+          {
+            products?.map(product => (
+              <CardHome 
+                key={product.id}
+                product={product}
+              />
+            ))
+          }
+        </div>
+          
       </div>
-    </div>
   )
 }
 export default Home

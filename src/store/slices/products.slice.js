@@ -5,24 +5,19 @@ const productsSlice = createSlice({
     name: 'products',
     initialState:null,
     reducers: {
-        setProducts:(state, action) => action.payload
-        
+        setProducts:(state, action) => action.payload 
     }
     
 })
-
-
-
-
 
 export const {setProducts} = productsSlice.actions
 export default productsSlice.reducer
 
 // en esta carpeta se realiza el redux thang
-export const getAllProducts = () => (dispactch) =>{
+export const getAllProducts = () => (dispatch) => {
     const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/products'
     return axios.get(URL)
-    .then(res => dispactch(setProducts(res.data.data.products)))
+    .then(res => dispatch(setProducts(res.data.data.products)))
     .catch(err => console.log(err))
 }
 
