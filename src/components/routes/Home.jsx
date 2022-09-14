@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllProducts } from '../../store/slices/products.slice'
+import CardHome from '../home/CardHome'
 
 const Home = () => {
 
@@ -21,7 +22,15 @@ console.log(products)
 
 
   return (
-    <div>Home</div>
+    <div className='home'>
+      <div className='home__container-car'>
+        {
+          products?.map (product => {
+            <CardHome />
+          })
+        }
+      </div>
+    </div>
   )
 }
 export default Home
