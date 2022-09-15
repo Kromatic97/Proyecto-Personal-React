@@ -5,37 +5,41 @@ import CardHome from '../home/CardHome'
 
 const Home = () => {
 
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   //viene de products.slice.js
   //los thang se dispachan igual que las actions
-useEffect(() => {
+  useEffect(() => {
 
-  dispatch(getAllProducts())
+    dispatch(getAllProducts())
 
-}, [])
+  }, [])
 
-//se accede a los datos del productsSlice
-//con UseSelector con  el mismo nombre usado en index.js products
-const products = useSelector(state => state.products)
-console.log(products)
+  //se accede a los datos del productsSlice
+  //con UseSelector con  el mismo nombre usado en index.js products
+  const products = useSelector(state => state.products)
+
 
 
   return (
     
-      <div className='home'>
-        <div className='home__container-card'>
-          {
-            products?.map(product => (
-              <CardHome 
-                key={product.id}
-                product={product}
-              />
-            ))
-          }
-        </div>
-          
+  
+
+    <div className='home'>
+          <input type="text" />
+          <button>buscar</button>
+      <div className='home__container-card'>
+        {
+          products?.map(product => (
+            <CardHome
+              key={product.id}
+              product={product}
+            />
+          ))
+        }
       </div>
+
+    </div>
   )
 }
 export default Home

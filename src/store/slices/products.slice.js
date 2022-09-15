@@ -3,22 +3,23 @@ import axios from "axios";
 
 const productsSlice = createSlice({
     name: 'products',
-    initialState:null,
+    initialState: null,
     reducers: {
-        setProducts:(state, action) => action.payload 
+        setProducts: (state, action) => action.payload
     }
-    
+
 })
 
-export const {setProducts} = productsSlice.actions
+export const { setProducts } = productsSlice.actions
 export default productsSlice.reducer
 
 // en esta carpeta se realiza el redux thang
 export const getAllProducts = () => (dispatch) => {
-    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/products'
+    const URL =
+        'https://ecommerce-api-react.herokuapp.com/api/v1/products'
     return axios.get(URL)
-    .then(res => dispatch(setProducts(res.data.data.products)))
-    .catch(err => console.log(err))
+        .then(res => dispatch(setProducts(res.data.data.products)))
+        .catch(err => console.log(err))
 }
 
 //por cada archivo solo se puede hacer un export
