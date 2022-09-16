@@ -26,8 +26,12 @@ const Home = () => {
   
 
     <div className='home'>
-          <input type="text" />
-          <button>buscar</button>
+
+         <div className='home__search'>
+          <input className='home__search-text' type="text" />
+          <button className='home__search-btn'>Search</button>
+        </div> 
+
       <div className='home__container-card'>
         {
           products?.map(product => (

@@ -1,5 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import cardHome from './styles/cardHome.css'
+
 
 const CardHome = ({ product }) => {
   //usenavigate para cuando demos click en la card del producto

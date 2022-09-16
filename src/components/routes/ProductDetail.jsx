@@ -12,19 +12,17 @@ const ProductDetail = () => {
   const { id } = useParams()
 
   useEffect(() => {
-    const URL =`https://ecommerce-api-react.herokuapp.com/api/v1/products/${id}`
+    const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/products/${id}`
     axios.get(URL)
-    .then( res => setProductInfo(res.data.data.product))
-    .catch(err => console.log(err))
+      .then(res => setProductInfo(res.data.data.product))
+      .catch(err => console.log(err))
   }, [])
-  
-  console.log(productInfo);
-  
+
   return (
     //aqui desplegar la informacion de la card seleccionada
     <div>
-      <ProductDescription 
-      productInfo={productInfo}
+      <ProductDescription
+        productInfo={productInfo}
       />
     </div>
 
