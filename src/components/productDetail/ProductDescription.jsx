@@ -15,9 +15,11 @@ const ProductDescription = ({ productInfo }) => {
   }
   return (
     <div className='product-info'>
-      <header className='product-info__header'>
+      
+      <header className='product-info__header-img'>
         <img className='product-info__img' src={productInfo?.productImgs[0]} alt="" />
       </header>
+
       <section className='product-info__card'>
         <h2 className='product-info__name'>{productInfo?.title}</h2>
         <p className='product-info__description'>{productInfo?.description}</p>
@@ -31,14 +33,14 @@ const ProductDescription = ({ productInfo }) => {
           <article className='product-info__quantity'>
             <h3 className='product-info__quantity-label'>Quantity</h3>
 
-            <div>
-              <button onClick={handleMinus}>-</button>
+            <div className='product-info__btn-quantity'>
+              <button className='product-info__btn-count' onClick={handleMinus}>-</button>
               <div>{counter}</div>
-              <button onClick={handlePlus}>+</button>
+              <button  className='product-info__btn-count' onClick={handlePlus}>+</button>
             </div>
-
           </article>
         </div>
+          <button className='product-info_btn-cart'>ADD TO CART</button>
       </section>
     </div>
 
