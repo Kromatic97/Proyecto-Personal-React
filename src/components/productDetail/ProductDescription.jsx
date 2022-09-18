@@ -26,7 +26,7 @@ const ProductDescription = ({ productInfo }) => {
 
         <div className='product-info__body'>
           <article className='product-info__price'>
-            <h3 className='product-info__price'>Price</h3>
+            <h3 className='product-info__price-title'>Price</h3>
             <span className='product-info__price-value'>{productInfo?.price}</span>
           </article>
 
@@ -40,7 +40,8 @@ const ProductDescription = ({ productInfo }) => {
             </div>
           </article>
         </div>
-          <button className='product-info_btn-cart'>ADD TO CART</button>
+
+          <button className='product-info_btn-cart'> ADD TO CART<i className="fa-solid fa-cart-plus"></i></button>
       </section>
     </div>
 

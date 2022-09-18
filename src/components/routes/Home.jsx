@@ -28,8 +28,8 @@ const Home = () => {
     <div className='home'>
 
          <div className='home__search'>
-          <input className='home__search-text' type="text" />
-          <button className='home__search-btn'>Search</button>
+          <input className='home__search-text' placeholder='What are you looking for?' type="text" />
+          <button className='home__search-btn'><i className="fa-solid fa-magnifying-glass"></i></button>
         </div> 
 
       <div className='home__container-card'>

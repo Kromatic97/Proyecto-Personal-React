@@ -10,23 +10,25 @@
 
 .home__search-text{
 
-    width: 500px;
+    width: 700px;
     height: 35px;
-    border: solid 0,3px #ccc7;
-    border-radius: 3px;
+    border: solid 0.1px rgba(221, 214, 214, 0.978);
+    border-radius: 5px;
     margin: 5px;
     padding: 10px;
+ 
 
 }
 
 .home__search-btn{
     cursor: pointer;
-    background-color: #e76c46ee; 
+    background-color: #f85555; 
     border-radius: 5px;   
     width: 100px;
     height: 35px;
     border: none;
     margin: 5px;
+    color: white;
     
     transition: box-shadow 200ms ease, transform 200ms ease;
     

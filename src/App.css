@@ -5,7 +5,7 @@
 }
 
 .active-link{
-    color: lightcoral;
+    color: #f85555;
     
 }
 
@@ -118,13 +118,18 @@ box-shadow: 10px 10px 5px -1px rgba(207,201,207,1);
 
 
 .product-info__card{
- margin-top: 10px;
- width: 800px;
+ margin: 10px;
+ width: 600px;
  height: auto;
  padding: 10px;
  border-radius: 10px;
  border: solid 0.5px grey;
  transition: box-shadow 400ms ease, transform 400ms ease;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 1em;
 }
 
 .product-info__card:hover{
@@ -138,17 +143,20 @@ box-shadow: 10px 10px 5px -1px rgba(207,201,207,1);
     text-align: left;
     margin-bottom: 5px;
 }
+
+
 .product-info__description{
     text-align:left;
 }
 
 
 .product-info__body{
+    width: 400px;
     height: auto;
-    background-color: aqua;
+    
     display: grid;
-    grid-template-columns: repeat(1,  1fr);
-    align-items: center;
+    grid-template-columns: repeat(2,  1fr);
+    align-items: left;
     justify-content: center;
 }
 
@@ -160,22 +168,56 @@ box-shadow: 10px 10px 5px -1px rgba(207,201,207,1);
     width: 100%;
 }
 
+.product-info__quantity-label{
+    text-align: center;
+    margin-right: 10px;
+}
+
+.product-info__price{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
 .product-info__btn-count{
     width: 45px;
-    height: 30px;
+    height: 25px;
     margin: 10px;
     cursor: pointer;
-    border: none;
-    background-color: #e76c46ee;
+    color: grey;
+    border: solid 0.1px grey;
     border-radius: 5px;
+    font-weight: 700;
+    font-size: 15px;
    
 }
 
 .product-info__btn-count:hover{
     transform:scale(1.01);
-   background-color: #ccc7;
-   color:white
-    
-    
+   background-color: grey;
+   color:white;  
+}
+
+.product-info_btn-cart{
+    background-color: #f85555;
+    border: none;
+    border-radius: 3px;
+    height: 40px;
+    width: 350px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+.product-info_btn-cart:hover{
+    background-color:rgba(113, 218, 113, 0.961);
+    color:rgb(41, 136, 41);
+
+}
+
+
+.fa-cart-plus{
+    margin-left: 15px;
 }
 
